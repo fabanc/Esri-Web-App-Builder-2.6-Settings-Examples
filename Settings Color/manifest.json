@@ -7,7 +7,7 @@
   "version": "2.6",
   "wabVersion": "2.6",
   "author": "Fabien Ancelin",
-  "description": "This is a widget used to demonstrate how to configure a text settings",
+  "description": "This is a widget used to demonstrate how to configure a color settings",
   "copyright": "",
   "license": "http://www.apache.org/licenses/LICENSE-2.0",
   "properties": {

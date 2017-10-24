@@ -33,31 +33,25 @@ function(declare, lang, Color, on, _WidgetsInTemplateMixin, BaseWidgetSetting) {
     },
 
     postCreate: function(){
-      //the config object is passed in
       this.inherited(arguments);
-      if(this.config) {
-        this._init();
-      }
-
-      this.own(on(this.colorPicker, 'change', lang.hitch(this, this._onColorChange)));
-    },
-
-    _init: function() {
-      this.selectionColor = this.config.selectionColor;
-      if(this.config.selectionColor) {
-         this.colorPicker.setColor(new Color(this.selectionColor));
-      }
+      this.setConfig(this.config);
+      this.own(
+        on(this.colorPicker, 'change', lang.hitch(this, this._onColorChange))
+      );
     },
 
     setConfig: function(config){
        this.config = config;
-       this._init();
+       this.selectionColor = config.selectionColor;
+       if(this.config.selectionColor) {
+          this.colorPicker.setColor(new Color(this.selectionColor));
+       }
     },
 
     getConfig: function(){
       //WAB will get config object through this method
       return {
-        selectionColor: this.colorPicker
+        selectionColor: this.selectionColor
       };
     },
 

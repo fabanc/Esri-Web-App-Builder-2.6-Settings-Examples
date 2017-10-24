@@ -2,59 +2,54 @@ define(['dojo/_base/declare', 'jimu/BaseWidget'],
   function(declare, BaseWidget) {
     //To create a widget, you need to derive from BaseWidget.
     return declare([BaseWidget], {
+
       // Custom widget code goes here
+      baseClass: 'jimu-widget-demo',
 
-      baseClass: 'jimu-widget-customwidget'
+      postCreate: function() {
+        this.inherited(arguments);
+        console.log('postCreate');
+      },
 
-      //this property is set by the framework when widget is loaded.
-      //name: 'CustomWidget',
+      startup: function() {
+       this.inherited(arguments);
+       this.coloredText.style.color = this.config.selectionColor;
+       //this.mapIdNode.innerHTML = 'map id:' + this.map.id;
+       console.log('startup');
+      },
 
+      onOpen: function(){
+        console.log('onOpen');
+      },
 
-      //methods to communication with app container:
+      onClose: function(){
+        console.log('onClose');
+      },
 
-      // postCreate: function() {
-      //   this.inherited(arguments);
-      //   console.log('postCreate');
-      // },
+      onMinimize: function(){
+        console.log('onMinimize');
+      },
 
-      // startup: function() {
-      //  this.inherited(arguments);
-      //  this.mapIdNode.innerHTML = 'map id:' + this.map.id;
-      //  console.log('startup');
-      // },
+      onMaximize: function(){
+        console.log('onMaximize');
+      },
 
-      // onOpen: function(){
-      //   console.log('onOpen');
-      // },
+      onSignIn: function(credential){
+        /* jshint unused:false*/
+        console.log('onSignIn');
+      },
 
-      // onClose: function(){
-      //   console.log('onClose');
-      // },
+      onSignOut: function(){
+        console.log('onSignOut');
+      },
 
-      // onMinimize: function(){
-      //   console.log('onMinimize');
-      // },
+      onPositionChange: function(){
+        console.log('onPositionChange');
+      },
 
-      // onMaximize: function(){
-      //   console.log('onMaximize');
-      // },
-
-      // onSignIn: function(credential){
-      //   /* jshint unused:false*/
-      //   console.log('onSignIn');
-      // },
-
-      // onSignOut: function(){
-      //   console.log('onSignOut');
-      // }
-
-      // onPositionChange: function(){
-      //   console.log('onPositionChange');
-      // },
-
-      // resize: function(){
-      //   console.log('resize');
-      // }
+      resize: function(){
+        console.log('resize');
+      }
 
       //methods to communication between widgets:
 
