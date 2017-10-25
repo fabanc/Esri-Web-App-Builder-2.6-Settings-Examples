@@ -7,14 +7,10 @@ define(['dojo/_base/declare', 'jimu/BaseWidget'],
       baseClass: 'jimu-widget-demo',
 
       postCreate: function() {
-        this.inherited(arguments);
         console.log('postCreate');
       },
 
       startup: function() {
-       this.inherited(arguments);
-       this.coloredText.style.color = this.config.selectionColor;
-       //this.mapIdNode.innerHTML = 'map id:' + this.map.id;
        console.log('startup');
       },
 
