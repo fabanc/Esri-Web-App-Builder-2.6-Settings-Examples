@@ -1,0 +1,11 @@
+{
+  "label": "Demo Settings Number",
+  "name": "Settings Number",
+  "platform": "HTML",
+  "version": "2.6",
+  "wabVersion": "2.6",
+  "author": "Fabien Ancelin",
+  "description": "This is a widget used to demonstrate how to configure a numeric settings",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0"
+}
