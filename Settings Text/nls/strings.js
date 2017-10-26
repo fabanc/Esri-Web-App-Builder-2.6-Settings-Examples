@@ -1,7 +1,5 @@
 define({
   root: ({
-    _widgetLabel: "Demo",
-    _featureAction_ShowVertex: "Show Vertex Count",
     label1: "I am a demo widget.",
     label2: "This is configurable."
   }),
@@ -31,5 +29,5 @@ define({
   "th": 0,
   "tr": 0,
   "vi": 0,
-  "zh-cn": 1
+  "zh-cn": 0
 });

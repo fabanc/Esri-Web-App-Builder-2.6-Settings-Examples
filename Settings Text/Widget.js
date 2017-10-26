@@ -16,7 +16,6 @@ function(declare, BaseWidget) {
 
     startup: function() {
       this.inherited(arguments);
-      this.mapIdNode.innerHTML = 'map id:' + this.map.id;
       console.log('startup');
     },
 
@@ -43,10 +42,6 @@ function(declare, BaseWidget) {
 
     onSignOut: function(){
       console.log('onSignOut');
-    },
-
-    showVertexCount: function(count){
-      this.vertexCount.innerHTML = 'The vertex count is: ' + count;
     }
   });
 });
