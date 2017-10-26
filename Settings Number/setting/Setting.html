@@ -1,0 +1,12 @@
+<div>
+	<label>${nls.configText}</label>
+	<input
+	  type="text"
+    data-dojo-type="dijit/form/NumberSpinner"
+		data-dojo-attach-point="elevationInput"
+    required="true"
+    value="-1"
+    data-dojo-props="constraints:{min:-20000,max:20000,places:0},
+    invalidMessage:'Please enter a numeric value.',
+    rangeMessage:'Invalid elevation.'" />
+</div>
