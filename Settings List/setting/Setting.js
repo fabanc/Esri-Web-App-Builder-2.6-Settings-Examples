@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 ///////////////////////////////////////////////////////////////////////////
-
+// Most of the code is taken from the configuration page of the Measurement widget.
 define([
   'dojo/_base/declare',
   "dojo/_base/lang",
